@@ -2,27 +2,25 @@
 
 <article class="card">
   <article class="personal">
-    <img
-      src="/Arman.jpeg"
-      alt=""
-      width="160px"
-      height="160px">
+    <img src="/Arman.jpeg" alt="Profielfoto van {{ person.name }}">
     <h1>{{ person.name }}</h1>
-    <p>{{ person.activity }}</p>
+    <p>{{ person.custom.activity | default: "Geen activiteit opgegeven" }}</p>
     <ul class="sites">
       <li>
-        <a href="https://armanvoogd.com/"></a>Portfolio</li>
+        <a href="https://armanvoogd.com/">Portfolio</a>
+      </li>
       <li>
-        <a href="https://armanvd.github.io/the-startup-responsive-interactive-website/"></a>AccessDash</li>
+        <a href="https://armanvd.github.io/the-startup-responsive-interactive-website/">AccessDash</a>
+      </li>
       <li>
-        <a href="https://iloveweb.armanvoogd.com"></a>I Love Web</li>
+        <a href="https://iloveweb.armanvoogd.com">I Love Web</a>
+      </li>
     </ul>
   </article>
   <article class="about-me">
     <h2>About me</h2>
-    <p>{{ person.bio }}</p>
+    <p>{{ person.bio | default: "Nog geen bio beschikbaar." }}</p>
   </article>
 </article>
-
 
 {% render 'partials/foot.liquid' %}
