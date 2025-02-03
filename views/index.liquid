@@ -1,59 +1,28 @@
 {% render 'partials/head.liquid' %}
 
-<div class="card-cont">
-  <div class="card">
-    <div class="card_front">
-      <header>
-        <img
-          src="/bg.jpg"
-          alt="background"
-          class="bg">
-        <img
-          src="/Arman.jpeg"
-          alt="Arman"
-          class="pfp">
-      </header>
-      <h1>
-        {{ person.name }}
-      </h1>
-      <h2>
-        Student Frontend Design and Development
-      </h2>
-      <div>
-        <p>
-          Persian Quisine = GOAT
-          <br>
-          Dit is een test om te kijken of ik al wat kan coderen
-        </p>
-      </div>
-    </div>
-    <div class="card_back">
-      <header>
-        <img
-          src="/bg.jpg"
-          alt="background"
-          class="bg">
-        <img
-          src="/Arman.jpeg"
-          alt="Arman"
-          class="pfp">
-      </header>
-      <h1>
-        آرمان فخت
-      </h1>
-      <h2>
-        پانشجو فپنپ
-      </h2>
-      <div>
-        <p>
-          غذاهای ایرانی بهترین هستند
-          <br>
-          این یک تست است که ببینم آیا می توانم کمی کدنویسی کنم
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+<article class="card">
+  <article class="personal">
+    <img
+      src="/Arman.jpeg"
+      alt=""
+      width="160px"
+      height="160px">
+    <h1>{{ person.name }}</h1>
+    <p>{{ person.activity }}</p>
+    <ul class="sites">
+      <li>
+        <a href="https://armanvoogd.com/"></a>Portfolio</li>
+      <li>
+        <a href="https://armanvd.github.io/the-startup-responsive-interactive-website/"></a>AccessDash</li>
+      <li>
+        <a href="https://iloveweb.armanvoogd.com"></a>I Love Web</li>
+    </ul>
+  </article>
+  <article class="about-me">
+    <h2>About me</h2>
+    <p>{{ person.bio }}</p>
+  </article>
+</article>
 
 
 {% render 'partials/foot.liquid' %}

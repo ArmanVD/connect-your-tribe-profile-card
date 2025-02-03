@@ -2,17 +2,11 @@
   box-sizing: border-box;
 }
 
-html {
-  height: 100vh;
-}
-
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-image: url(/metallic.png);
+  background-size: cover;
   height: 100vh;
-  font-family: open sans;
-  background-color: blanchedalmond;
+  width: 100vw;
 }
 
 .card {
