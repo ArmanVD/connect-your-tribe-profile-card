@@ -4,10 +4,10 @@
   <article class="personal">
     <img src="/Arman.jpeg" alt="Profielfoto van {{ person.name }}">
     <h1>{{ person.name }}</h1>
-    <p>{{ person.custom.activity | default: "Geen activiteit opgegeven" }}</p>
+    <p>{{ person.custom.activity }}</p>
     <ul class="sites">
       <li>
-        <a href="https://armanvoogd.com/">Portfolio</a>
+        <a href="{{ person.website }}">Portfolio</a>
       </li>
       <li>
         <a href="https://armanvd.github.io/the-startup-responsive-interactive-website/">AccessDash</a>
@@ -19,7 +19,7 @@
   </article>
   <article class="about-me">
     <h2>About me</h2>
-    <p>{{ person.bio | default: "Nog geen bio beschikbaar." }}</p>
+    <p>{{ person.bio }}</p>
   </article>
 </article>
 
