@@ -27,6 +27,24 @@ if (personData.custom) {
   }
 }
 
+if (personData.birthdate) {
+  const birthdate = new Date(personData.birthdate);
+  const today = new Date();
+  let age = today.getFullYear() - birthdate.getFullYear();
+
+  // Corrigeer als de verjaardag dit jaar nog niet is geweest
+  const hasBirthdayPassed =
+    today.getMonth() > birthdate.getMonth() || (today.getMonth() === birthdate.getMonth() && today.getDate() >= birthdate.getDate());
+
+  if (!hasBirthdayPassed) {
+    age--;
+  }
+
+  personData.age = age; // Voeg de leeftijd toe aan de data
+} else {
+  personData.age = "Onbekend"; // Fallback als er geen geboortedatum is
+}
+
 // Maak een nieuwe Express applicatie aan, waarin we de server configureren
 const app = express();
 
@@ -47,6 +65,12 @@ app.set("views", "./views");
 app.get("/", async function (request, response) {
   // Render index.liquid uit de Views map en geef de opgehaalde data mee, in een variabele genaamd person
   response.render("index.liquid", { person: personData });
+});
+
+// Maak een GET route voor de oefenen pagina
+app.get("/oefenen", async function (request, response) {
+  // Render oefenen.liquid uit de views map en geef de opgehaalde data mee, in een variabele genaamd person
+  response.render("oefenen.liquid", { person: personData });
 });
 
 // Had je meer pagina's in je oude visitekaartje? Zoals een contact.html?
