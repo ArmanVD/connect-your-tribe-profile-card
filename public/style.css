@@ -33,6 +33,7 @@ body {
     border-radius: 15px;
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
 
     img {
       border-radius: 999px;
