@@ -81,13 +81,19 @@ Als je je afvraagt waarom jouw naam niet meer in je kaartje staat: dat komt door
 
 Als alles zonder fouten lokaal werkt, ga je verder met het publiceren van jouw project op Internet. Omdat we met NodeJS werken, is dit iets ingewikkelder dan voorheen met GitHub Pages. Er moet namelijk een server omgeving opgestart worden. Wij gebruiken _Render_ als hostingpartij (gratis voor studenten), maar je mag natuurlijk je eigen voorkeur volgen als die anders is.
 
-1. Check nog een laatste keer of alles lokaal werkt door je server op te starten (zie hierboven hoe).
-2. *Commit* en *Push* jouw project naar GitHub.
-3. Meld je met behulp van je GitHub account aan bij [Render](https://render.com/).
-4. Klik in het Dashboard op [+ New -> Web Service](https://dashboard.render.com/web/new).
-5. Zoek de juiste repository (*connect-your-tribe-profile-card* als je niets hernoemd hebt) en volg de stappen om je project te _Deployen_. Render importeert jouw code vanaf GitHub, installeert de _dependencies_ via `npm install`, en voert `npm start` uit. Deze _deploy_ kan even duren (net als dat het bij GitHub Pages soms even duurde voordat jouw wijzigingen online kwamen).
-6. Er wordt een unieke URL voor jouw project door Render gegenereerd.
-7. Open die URL in je browser, check of alles werkt en voer daarna deze URL in bij jouw repository op GitHub.
+Check nog een laatste keer of alles lokaal werkt door je server op te starten (zie hierboven hoe).
+
+*Commit* en *Push* jouw project naar GitHub.
+
+Meld je met behulp van je GitHub account aan bij [Render](https://render.com/).
+
+Klik in het Dashboard op [+ New -> Web Service](https://dashboard.render.com/web/new).
+
+Zoek de juiste repository (*connect-your-tribe-profile-card* als je niets hernoemd hebt) en volg de stappen om je project te _Deployen_. Render importeert jouw code vanaf GitHub, installeert de _dependencies_ via `npm install`, en voert `npm start` uit. Deze _deploy_ kan even duren (net als dat het bij GitHub Pages soms even duurde voordat jouw wijzigingen online kwamen).
+
+Er wordt een unieke URL voor jouw project door Render gegenereerd.
+
+Open die URL in je browser, check of alles werkt en voer daarna deze URL in bij jouw repository op GitHub.
 
 Omdat het hosten van NodeJS projecten complexer en duurder is dan het hosten van statische projecten, en we de gratis variant van Render gebruiken, “pauzeert” Render soms na een tijdje jouw project. Het kan daarna even duren voordat je NodeJS project weer opgestart is, soms wel 60 seconden.
 
@@ -135,9 +141,11 @@ Maak de nieuwe CSS versie van jouw visitekaartje door de `.css` bestanden aan te
 
 Voer stap voor stap de gegevens uit de FDND JSON API door in jouw visitekaartje, check na elke stap of alles nog werkt. Voeg eventueel extra data toe in de database, als jouw ontwerp dat nodig heeft. En gebruik de Liquid Template language om je HTML dynamisch te maken.
 
-Blijf stap voor stap werken, stel vragen aan klasgenoten, op Discord of aan een docent als je er niet uit komt.
+Blijf stap voor stap werken, stel vragen aan klasgenoten, op Teams, op Discord of aan een docent als je er niet uit komt.
 
-Push je werk regelmatig naar GitHub, en vermeld in je commit messages het relevante issue nummer. Kijk ook eens goed naar hoe je Partial Commits in kunt zetten om je werk meer te structureren.
+💪 Tip voor als je het `custom` object ook wilt gebruiken: `JSON.parse()`.
+
+Push je werk regelmatig naar GitHub, en vermeld in je commit messages het relevante issue nummer. Kijk ook eens goed naar hoe je _Partial Commits_ in kunt zetten om je werk meer te structureren.
 
 #### Bronnen
 
@@ -145,6 +153,7 @@ Push je werk regelmatig naar GitHub, en vermeld in je commit messages het releva
 - [Liquid Filters](https://liquidjs.com/filters/overview.html)
 - [Using the Fetch API @ MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 - [Express documentatie](https://expressjs.com/en/5x/api.html) (geavanceerd)
+- [JSON.parse() @ MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
 - [Partial commits in GitHub Desktop](https://github.blog/news-insights/product-news/partial-commits-in-github-for-windows/)
 - [Committing and reviewing changes to your project in GitHub Desktop](https://docs.github.com/en/desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project-in-github-desktop)
 
@@ -152,3 +161,9 @@ Push je werk regelmatig naar GitHub, en vermeld in je commit messages het releva
 ### Integreren: je nieuwe werk online zetten
 
 Een ander verschil tussen Render en GitHub Pages, is dat je bij Render handmatige deploys moet maken. Nadat je je werk naar GitHub hebt gepusht, komt dat niet automatisch live. Je kunt dit wel instellen, maar dat is aan jou. Vergeet voor nu niet een handmatige deploy te doen als je je nieuwe werk aan de wereld wilt laten zien.
+
+#### Bronnen
+
+- [How Deploys Work](https://render.com/docs/deploys)
+- [Skipping an auto-deploy](https://render.com/docs/deploys#skipping-an-auto-deploy)
+- [Troubleshooting Your Deploy @ Render](https://render.com/docs/troubleshooting-deploys)
